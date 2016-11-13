@@ -2,22 +2,11 @@
 <html>
 <head>
 	<title>Reddit Browser</title>
-
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
-
-<!--	<header>
-		<div class="header-limiter">
-			<h1><a href="http://tutorialzine.com/2016/08/building-your-first-app-with-vue-js/">Building Your First App With <span>Vue.js</span></a></h1>
-			<nav>
-				<a href="http://tutorialzine.com/2016/08/building-your-first-app-with-vue-js/">Download</a>
-			</nav>
-		</div>
-	</header> -->
-
-
+<!-- Based on vue.js tutorial located at http://tutorialzine.com/2016/08/building-your-first-app-with-vue-js/ -->
 	<div class="container">
 		<subreddit name="" style="flex: 0 0 100%"></subreddit>
 		<subreddit name="/r/poker"></subreddit>
@@ -31,7 +20,7 @@
 	<template id="subreddit">
 
 		<div class="subreddit">
-			<h2 v-if="name">{{ name | uppercase }}</h2>
+			<h2 v-if="name">{{ name }}</h2>
 			<h2 v-else>FRONT PAGE</h2>
 
 

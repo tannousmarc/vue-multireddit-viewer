@@ -13,17 +13,17 @@ a:hover{
 }
 
 
-html{
+body{
 	font: normal 16px sans-serif;
 	color: #333;
-	background-color: #f9f9f9;
+	background-color: #FE4A49;
 }
 
 
 .container{
-	padding: 27px 20px;
+	padding: 15px 10px;
 	margin: 30px auto 50px;
-	max-width: 1250px;
+	max-width: 1200px;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -40,12 +40,15 @@ html{
 }
 
 .subreddit h2{
-	font-size: 18px;
+	font-family : "Roboto", sans-serif;
+	text-transform: lowercase;
+	font-weight: 800;
+	font-size: 22px;
 	margin-bottom: 10px;
 }
 
 .subreddit .item-list{
-	border-top: 1px solid #bec9d0;
+	border-top: 1px solid #222;
 	padding-top: 20px;
 	list-style: none;
 }
@@ -78,9 +81,18 @@ html{
 }
 
 .post .details .title{
-	font-size: 15px;
-	margin-bottom: 3px;
-	color: #04477b;
+	font-size: 18px;
+	font-family : "Roboto", sans-serif;
+	margin-bottom: 1px;
+	color: #009FB7;
+	transition : 0.2s ease;
+}
+
+.post .details .title:hover{
+	text-decoration: none;
+	color: #FE4A49;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .post .details .title:visited{
@@ -111,107 +123,4 @@ html{
 		min-width: 300px;
 	    padding: 20px 15px;
 	}
-}
-
-
-
-
-
-
-/*----------------
-	Demo Styles
------------------*/
-
-header {
-	background-color: #35495e;
-	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
-	padding: 20px 30px;
-	box-sizing: border-box;
-}
-
-header .header-limiter {
-	max-width: 1250px;
-	text-align: center;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-between;
-}
-
-/* Logo */
-
-header .header-limiter h1 {
-    line-height: 40px;
-    margin: 0;
-    font-size: 18px;
-    font-weight: normal;
-}
-
-header .header-limiter h1 span {
-    color: #41b883;
-}
-
-/* The header links */
-
-header .header-limiter a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-header .header-limiter nav{
-	line-height: 40px;
-}
-
-header .header-limiter nav a{
-    display: inline-block;
-    padding: 0 5px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-    opacity: 0.9;
-    font-weight: bold;
-    border-radius: 3px;
-    padding: 0px 25px;
-    background-color: #D6336A;
-}
-
-header .header-limiter nav a:hover{
-	opacity: 1;
-}
-
-header .header-limiter nav a.selected {
-	color: #608bd2;
-	pointer-events: none;
-	opacity: 1;
-}
-
-/* Making the header responsive */
-
-@media all and (max-width: 600px) {
-
-	header {
-		padding: 20px 0;
-	}
-
-	header .header-limiter{
-		flex-direction: column;
-	}
-
-	header .header-limiter h1 {
-		margin: 10px 0 10px;
-		text-align: center;
-		font-size: 16px;
-		line-height: 1;
-	}
-
-}
-
-
-
-/* ------- Demo adds. Please ignore and remove ------- */
-
-
-@media (max-width: 1200px) {
-    #bsaHolder{
-    	display:none;
-    }
 }
