@@ -35,7 +35,7 @@ var post = Vue.component('post', {
 
 // Filter for cutting off strings that are too long.
 Vue.filter('truncate', function(value) {
-	var length = 130;
+	var length = 125;
 	if(value.length <= length) {
 		return value;
 	}
