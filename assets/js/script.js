@@ -1,5 +1,5 @@
 /*-----------------
-	Components
+Components
 -----------------*/
 
 // Parent | Subreddit component containing a list of 'post' components.
@@ -12,10 +12,10 @@ var subreddit = Vue.component('subreddit',{
 	},
 
 	created: function(){
-	    this.$http.get("https://www.reddit.com"+ this.name +"/hot.json?limit=10")
-	    .then(function(resp){
-	        this.posts=resp.data.data.children;
-	    });
+		this.$http.get("https://www.reddit.com"+ this.name +"/hot.json?limit=10")
+		.then(function(resp){
+			this.posts=resp.data.data.children;
+		});
 	}
 });
 
@@ -30,7 +30,7 @@ var post = Vue.component('post', {
 
 
 /*-----------------
-   Custom filters
+Custom filters
 -----------------*/
 
 // Filter for cutting off strings that are too long.
@@ -47,7 +47,7 @@ Vue.filter('truncate', function(value) {
 
 // Filter that takes an image url and creates a CSS style.
 Vue.filter('setAsBackground', function(value) {
-	if(value && value!='self' && value!='default' && value!='image') {
+	if(value && value!='self' && value!='default' && value!='image' && value!='nsfw') {
 		return 'background-image: url(' + value + ')';
 	}
 	else {
@@ -59,9 +59,14 @@ Vue.filter('setAsBackground', function(value) {
 
 
 /*-----------------
-   Initialize app
+Initialize app
 -----------------*/
 
-new Vue({
-	el: 'body'
+var vm =new Vue({
+	el: 'body',
+	methods: {
+		setStringTwo () {
+			localStorage.setItem('stringTwo', 'pula');
+		}
+	}
 });
