@@ -14,6 +14,9 @@ var subreddit = Vue.component('subreddit',{
 	created: function(){
 		this.$http.get("https://www.reddit.com"+ this.name +"/hot.json?limit=10")
 		.then(function(resp){
+			if(typeof resp.data == 'string') {
+   			resp.data = JSON.parse(resp.data);
+			}
 			this.posts=resp.data.data.children;
 		});
 	}
